@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(false);cin.tie(NULL)
 
-//http://codeforces.com/problemset/problem/430/C
 //Xor-tree
-//https://github.com/pin3da/Programming-contest/blob/master/solved/team%20training%202015/src/430C%20-%20Xor-tree.cpp
+//http://codeforces.com/problemset/problem/430/C
 
 using namespace std;
 
