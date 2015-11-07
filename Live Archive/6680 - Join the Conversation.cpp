@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(false);cin.tie(NULL)
 
+//https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4692
+
 using namespace std;
 
 int toInt(string &x){
@@ -49,7 +51,7 @@ int main(){
 		vector< vector<int> > G(id+1);
 		vector<bool> visited(id+1, false);
 
-		//contruimos el grafo a partir del mapeo anteior
+		//construimos el grafo a partir del mapeo anteior
 		string node,edges;
 		for(int i=0; i<n; i++){
 			tmp = chat[i];
