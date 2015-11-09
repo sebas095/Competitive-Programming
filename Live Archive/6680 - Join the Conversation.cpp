@@ -66,19 +66,14 @@ int main(){
 
 		//Hacemos el dfs dejando la ruta de maxima profundidad
 		int maxi = 0, init = 0, deep = 0;
-		for(int i=0; i <= id; i++){
-			visited.assign(id+1, false);
-			deep = 0;
-			//Buscamos el nodo con la maxima profundidad
-			dfs(i,G,visited,deep);
-			if(deep > maxi){
-				maxi = deep;
+		for(int i=0; i < G.size(); i++){
+			if(maxi < G[i].size()){
+				maxi = G[i].size();
 				init = i;
 			}			
 		}
 
 		//Visitamos los nodos donde la ruta es la de mayor profundidad
-		visited.assign(id+1, false);
 		dfs(init,G,visited, deep);
 
 		printf("%d\n",maxi);
