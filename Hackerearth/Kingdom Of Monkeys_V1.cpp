@@ -2,6 +2,9 @@
 #define fast ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define endl '\n'
 
+//PROBLEMA:
+//https://www.hackerearth.com/code-monk-graph-theory-i/algorithm/kingdom-of-monkeys/description/
+
 using namespace std;
 
 long long cost = 0;

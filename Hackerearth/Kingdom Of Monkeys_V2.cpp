@@ -2,6 +2,9 @@
 #define fast ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define endl '\n'
 
+//PROBLEMA:
+//https://www.hackerearth.com/code-monk-graph-theory-i/algorithm/kingdom-of-monkeys/description/
+
 using namespace std;
 
 struct Edge{
@@ -28,7 +31,7 @@ void union_set(int u, int v){
 
 	p[pu] = pv; //Los conectamos a un mismo padre
 	bananas[pv] += bananas[pu]; //Modificacion para este problema, 
-								//aqui el padre del arbol guardara el costo acumulado
+						//aqui el padre del arbol guardara el costo acumulado
 }
 
 void init(int n){
