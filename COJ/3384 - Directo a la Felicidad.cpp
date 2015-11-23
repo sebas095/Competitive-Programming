@@ -4,11 +4,9 @@
 using namespace std;
 
 int p[1008];
-vector<pair<int,int> > G(100008);
-vector<long long> child(1008);
+vector<long long> child(1008,0);
 vector<long long> countNode(1008,0);
 vector<long long> countEdge(1008,0);
-vector<bool> used(1008,false);
 set<int> parent;
 
 int find_set(int x){
@@ -17,8 +15,8 @@ int find_set(int x){
 }
 
 void union_set(int x, int y){
-	int px = p[x];
-	int py = p[y];
+	int px = find_set(x);
+	int py = find_set(y);
 	if(px == py) return;
 	p[px] = py;
 }
@@ -34,7 +32,6 @@ long long solve(int nodes, int ruta, int estadio){
 
 	for(it = parent.begin(); it != parent.end(); ++it){
 		long long aux = *it;
-		if(!used[aux]) continue;
 		long long edge = countEdge[aux]/2;
 		long long node = countNode[aux];
 
@@ -55,13 +52,10 @@ int main(){
 	for(int i=0; i<edges; i++){
 		cin>>a>>b;
 		a--;b--;
-		used[a] = used[b] = true;
 		child[a]++; //Contando aristas
 		child[b]++; //Contando aristas
-		G[i] = make_pair(a,b);
+		union_set(a,b);
 	}
-
-	for(int i=0; i<edges; i++) union_set(G[i].first, G[i].second);
 
 	for(int i=0; i<nodes; i++){
 		index = find_set(i);
