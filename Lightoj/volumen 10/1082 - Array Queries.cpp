@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define OO 1 << 9
+#define OO 100000000
 
 using namespace std;
  
