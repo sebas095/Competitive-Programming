@@ -13,8 +13,8 @@ int main() {
 		cin >> index >> n;
 		if (index == 0 or index == 2) { 
 			if (n == 0 and index == 2) cout << "2" << endl;
-			else if (n & 1) 		   cout << "1" << endl; 
-			else            		   cout << "0" << endl; 
+			else if (n & 1)            cout << "1" << endl; 
+			else            	   cout << "0" << endl; 
 		}
 		if (index == 1) {
 			if (n & 1) cout << "0" << endl; 
