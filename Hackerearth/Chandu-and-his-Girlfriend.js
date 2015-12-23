@@ -4,7 +4,7 @@ importPackage(java.io);
 importPackage(java.lang);
 
 var oo =  200000000
-var br = new BufferedReader( new InputStreamReader(System['in']) )
+var br = new BufferedReader( new InputStreamReader(System['in']) );
 
 function merge(A, p, q, r) {
 	var n1, n2, i = 0, j = 0;
