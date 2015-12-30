@@ -4,6 +4,8 @@
 #define MOD (long long)(1e9 + 7)
 #define MAX 31320
 
+// https://www.hackerearth.com/code-monk-minimum-spanning-tree/algorithm/quantitative-coefficient/
+
 using namespace std;
 
 struct Edge {
