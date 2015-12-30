@@ -3,6 +3,8 @@
 #define endl '\n'
 #define MAX (int)1e5 + 5
 
+// https://www.hackerearth.com/code-monk-minimum-spanning-tree/algorithm/maximum-spanning-tree/
+
 using namespace std;
 
 struct Edge {
