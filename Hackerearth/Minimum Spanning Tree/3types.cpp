@@ -68,14 +68,14 @@ int main() {
     }
   }
 
-  // ans1 o ans2 (son iguales) son los nodos que comparten ambos arboles
+  // ans1 o ans2 (son iguales) son el total de aristas que comparten ambos arboles
   ans1 = kruskal(men, n);
   if (ans1 != -1) {
     ans2 = kruskal(women, n);
     if (ans2 != -1) {
       // Total de aristas que necesita cada arbol para que este bien construido (sea spanning tree)
       int ans = n - 1 - ans2;
-      // Imprimimos los nodos que podemos extraer sin alterar la cantidad de nodos que necesita cada arbol
+      // Imprimimos el total de aristas que podemos extraer sin alterar la cantidad de nodos que necesita cada arbol
       cout << m - ans2 - 2 * ans << endl;
     }
     else cout << ans2 << endl;
