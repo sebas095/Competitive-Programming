@@ -2,6 +2,8 @@
 #define fast ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define endl '\n'
 
+// https://www.hackerearth.com/code-monk-minimum-spanning-tree/algorithm/3-types/
+
 using namespace std;
 
 struct Edge {
