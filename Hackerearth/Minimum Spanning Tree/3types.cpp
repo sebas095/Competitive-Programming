@@ -75,7 +75,7 @@ int main() {
     if (ans2 != -1) {
       // Total de aristas que necesita cada arbol para que este bien construido (sea spanning tree)
       int ans = n - 1 - ans2;
-      // Imprimimos el total de aristas que podemos extraer sin alterar la cantidad de nodos que necesita cada arbol
+      // Imprimimos el total de aristas que podemos extraer sin alterar la cantidad de aristas que necesita cada arbol
       cout << m - ans2 - 2 * ans << endl;
     }
     else cout << ans2 << endl;
