@@ -5,6 +5,8 @@
 #define ff first
 #define ss second
 
+// https://www.hackerearth.com/code-monk-minimum-spanning-tree/algorithm/check-it/
+
 using namespace std;
 
 typedef pair<int, int> PII;
