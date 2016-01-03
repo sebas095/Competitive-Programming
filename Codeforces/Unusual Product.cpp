@@ -22,7 +22,6 @@ int main() {
       scanf("%d", &value);
       acc++;
     }
-
   }
   cout << endl;
   return 0;
