@@ -6,19 +6,19 @@ using namespace std;
 
 int main() {
   fast;
-  int n, m, ans = 0;
-  cin >> n >> m;
-  vector<int> a(n);
+  int N, M, ans = 0;
+  cin >> N >> M;
+  vector<int> a(N);
 
-  for (int i = 0; i < n; i++) cin >> a[i];
+  for (int i = 0; i < N; i++) cin >> a[i];
   sort(a.begin(), a.end(), greater<int>());
 
-  for (int i = 0; i < n; i++) {
-    m -= a[i];
+  for (int i = 0; i < N; i++) {
+    M -= a[i];
     ans++;
-    if (m <= 0) break;
+    if (M <= 0) break;
   }
-  
+
   cout << ans << endl;
   return 0;
 }
