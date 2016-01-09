@@ -20,7 +20,7 @@ int main() {
   }
 
   for (int i = 0; i < n; i++) {
-    if(i) cout << " ";
+    if (i) cout << " ";
     cout << A[i];
   }
   cout << endl;
