@@ -4,14 +4,10 @@
 
 using namespace std;
 
-int inv(int x) {
-  int r, revers = 0;
-  while(x > 0) {
-    r = x % 10;
-    x = x / 10;
-    revers = revers * 10 + r;
-  }
-  return revers;
+int inv(int n) {
+  string s = to_string(n);
+  reverse(s.begin(), s.end());
+  return atoi(s.c_str());
 }
 
 struct state {
@@ -20,12 +16,11 @@ struct state {
   state(int a, int cost) : a(a), cost(cost) {}
 };
 
-bool vi[100006];
-
 int bfs(int a, int b) {
   queue<state> q;
+  unordered_set<int> vi;
   q.push(state(a, 0));
-  vi[a] = true;
+  vi.insert(a);
 
   while (!q.empty()) {
     state curr = q.front(); q.pop();
@@ -34,17 +29,18 @@ int bfs(int a, int b) {
     int tmp1 = curr.a + 1;
     int tmp2 = inv(curr.a);
 
-    if (!vi[tmp1]) {
-      vi[tmp1] = true;
+    if (!vi.count(tmp1)) {
+      vi.insert(tmp1);
       q.push(state(tmp1, curr.cost + 1));
     }
-    if (!vi[tmp2]) {
-      vi[tmp2] = true;
+    if (!vi.count(tmp2)) {
+      vi.insert(tmp2);
       q.push(state(tmp2, curr.cost + 1));
     }
   }
   return -1;
 }
+
 
 int main() {
   fast;
@@ -52,7 +48,6 @@ int main() {
   cin >> t;
 
   while (t--) {
-    memset(vi, false, sizeof(vi));
     cin >> a >> b;
     cout << bfs(a, b) << endl;
   }
