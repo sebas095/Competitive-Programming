@@ -11,18 +11,18 @@ int main(){
   while(cases--){
     int N;
     cin >> N;
-		cout << fixed;
-		cout.precision(3);
+    cout << fixed;
+    cout.precision(3);
     vector<double> students(N);
-		double average = 0.0, count = 0.0, ans = 0.0;
+    double average = 0.0, count = 0.0, ans = 0.0;
 
-		for(int i = 0; i < N; i++) cin >> students[i];
-		for(int i = 0; i < N; i++){
+    for(int i = 0; i < N; i++) cin >> students[i];
+    for(int i = 0; i < N; i++){
       average += students[i];
     }
 
     average /= N;
-		for(int i = 0; i < N; i++){
+    for(int i = 0; i < N; i++){
       if(students[i] > average) count += 1;
     }
 
