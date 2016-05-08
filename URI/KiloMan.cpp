@@ -4,31 +4,24 @@
 
 using namespace std;
 
-int solve(vector<int> &patterns, string &jumps) {
-  int ans = 0;
-
-  for (int i = 0; i < patterns.size(); i++) {
-    if ((patterns[i] == 1 or patterns[i] == 2) and jumps[i] == 'S') ans++;
-    else if (patterns[i] > 2 and jumps[i] == 'J')                   ans++;
-  }
-
-  return ans;
-}
-
 int main() {
   fast;
-  int tc, s;
-  cin >> tc;
+  int n, s;
+  string inst;
+  cin >> n;
 
-  while (tc--) {
+  while(n--) {
+    int ans = 0;
     cin >> s;
-    string jumps;
-    vector<int> patterns(s);
+    vector<int> v(s);
+    for (int i = 0; i < s; i++) cin >> v[i];
+    cin >> inst;
 
-    for (int i = 0; i < s; i++) cin >> patterns[i];
-    cin >> jumps;
-
-    cout << solve(patterns, jumps) << endl;
+    for (int i = 0; i < s; i++) {
+      if (inst[i] == 'S' and (v[i] == 1 or v[i] == 2)) ans++;
+      else if(inst[i] == 'J' and v[i] > 2)             ans++;
+    }
+    cout << ans << endl;
   }
 
   return 0;
