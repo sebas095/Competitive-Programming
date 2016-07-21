@@ -18,6 +18,16 @@ long long DP(){
 	return ans[k];
 }
 
+//Forma Iterativa
+long ways [7491];
+void count (){
+    ways [0] = 1;
+    for (int i = 0; i < 5; i++ ){
+        for (int j = coins [i]; j < 7491; j++)
+            ways [j] += ways [j - coins [i]];
+    }
+}
+
 int main(){
 	int t;
 	cin>>t;
